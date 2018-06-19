@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i|Oswald:200,300,400,500,600,700&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese')
+
+@import color
+
+// MATERIAL VARIABLE
+=flexbox
+	display: -webkit-box
+	display: -webkit-flex
+	display: -moz-flex
+	display: -ms-flexbox
+	display: flex
+=clearfix
+	content: ''
+	display: table
+	width: 100%
+	clear: both
+
+=mainbutton
+	display: block
+	text-align: center
+	line-height: 36px
+	background: $blue
+	color: $white
+	font-weight: 900
+	text-transform: uppercase
+	+fs(14rem)
+	+bor-rad(5px)
+	&:hover
+		background: linear-gradient(135deg, $dred, $red)
+		box-shadow: 0px 5px 10px $dred
+
+=fs($size)
+	font-size: ($size / 16)
+
+body
+	margin: 0
+	padding: 0
+	+fs(15rem)
+	font-family: 'Montserrat', sans-serif
+	color: $main
+	background: $white
+	line-height: 1.5
+	+media-breakpoint-down(sm)
+		+fs(14rem)
+html
+	overflow: auto
+.fullpage
+	overflow: hidden
+	// max-width: 1600px
+	// margin: 0 auto
+a 
+	color: $blue
+	+transition(all,0.3s)
+	font-family: 'Montserrat'
+	&:hover
+		color: $cyan
+a, a:hover
+	&:focus, &:active, &:hover
+		outline: none
+		text-decoration: none
+input,button, select, textarea
+	+transition(all,0.3s)
+	&:hover, &:active, &:focus
+		outline: none
+button 
+	border: none
+	background: none
+	margin: 0
+	padding: 0
+	+transition(all,0.3s)
+img, iframe
+	vertical-align: middle
+
+.container
+	+pos(static,null)
+	+media-breakpoint-up(xl)
+		max-width: 1280px
+		width: 100%
+.content
+	line-height: 1.5
+	+fs(14rem)
+	+media-breakpoint-down(md)
+		+fs(13rem)
+		line-height: 1.8
+	ul, ol, p, h1, h2, h3, h4, h5, h6, img, figure
+		margin-bottom: 15px
+		line-height: 1.5
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+		&:last-child
+			margin-bottom: 0
+	strong
+		font-weight: 500
+	figure
+		margin: 0 auto 15px
+		text-align: center
+		+media-breakpoint-down(xs)
+			margin-bottom: 10px
+		img
+			margin-bottom: 5px
+		figcaption
+			// background: darken($white,5%)
+			padding: 5px 0
+			text-align: center
+			+fs(13rem)
+			font-style: italic
+			color: darken($white,60%)
+	ul 
+		padding-left: 15px
+		li 
+			+pos(rel,null)
+			&:before
+				content: ''
+				display: block
+				width: 4px
+				height: 4px
+				+bor-rad(50px)
+				background: darken($white,60%)
+				+pos(abs, 7px null null -15px)
+
+.row
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12, .col, .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12, .col-md, .col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5, .col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10, .col-lg-11, .col-lg-12, .col-lg, .col-xl-1, .col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6, .col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11, .col-xl-12, .col-xl
+	+transition(all,0.3s)
+	+pos(static,null)
+.col-12
+	width: 100%
+.nopadding
+	padding: 0
+*
+	&:hover, &:active, &:focus
+		outline: none
+	&:before, &:after
+		font-family: 'fontawesome'
+.lnr
+	font-family: 'linearicons-free'
+	&:before, &:after
+		font-family: 'linearicons-free'

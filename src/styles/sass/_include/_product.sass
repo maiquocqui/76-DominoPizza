@@ -1,0 +1,182 @@
+.product-group
+	margin-bottom: 20px
+	.title-wrap
+		+flexbox
+		border-bottom: 2px dotted $dblue
+		padding-bottom: 10px
+		margin-bottom: 10px
+		+media-breakpoint-down(lg)
+			flex-wrap: wrap
+		.group-name
+			+fs(36rem)
+			font-weight: 900
+			color: $dblue
+			text-transform: uppercase
+			width: 300px
+			+media-breakpoint-down(lg)
+				+fs(28rem)
+				width: 100%
+			+media-breakpoint-down(md)
+				+fs(24rem)
+			+media-breakpoint-down(sm)
+				+fs(20rem)
+			+media-breakpoint-down(xs)
+				+fs(18rem)
+		.price-list
+			+flexbox
+			width: calc(100% - 300px)
+			+media-breakpoint-down(lg)
+				width: 100%
+			+media-breakpoint-down(xs)
+				flex-wrap: wrap
+			.group-price
+				width: calc((100% - 30px -30px)/3)
+				+flexbox
+				// justify-content: center
+				align-items: center
+				align-content: center
+				text-transform: uppercase
+				color: $dblue
+				+media-breakpoint-down(sm)
+					width: calc((100% - 15px - 15px)/3)
+				+media-breakpoint-down(xs)
+					width: calc((100% - 20px)/2)
+				+ .group-price
+					margin-left: 30px
+					+media-breakpoint-down(sm)
+						margin-left: 15px
+					+media-breakpoint-down(xs)
+						margin-left: 0
+				&:nth-child(2n)
+					+media-breakpoint-down(xs)
+						margin-left: 20px
+				.price-title
+					line-height: 1
+					strong
+						display: block
+						width: 100%
+						+fs(16rem)
+						font-weight: 900
+						+media-breakpoint-down(lg)
+							+fs(14rem)
+						+media-breakpoint-down(sm)
+							+fs(12rem)
+					span
+						display: block
+						width: 100%
+						+fs(10rem)
+						font-weight: 900
+						+media-breakpoint-down(sm)
+							// +fs(8rem)
+				.price
+					+fs(26rem)
+					font-weight: 900
+					padding-left: 10px
+					+media-breakpoint-down(lg)
+						+fs(24rem)
+					+media-breakpoint-down(sm)
+						+fs(22rem)
+.product-list
+	.row
+		+media-breakpoint-down(lg)
+			margin: 0px -5px
+		+media-breakpoint-down(xs)
+			margin: 0px
+	article
+		margin-bottom: 30px
+		+media-breakpoint-down(lg)
+			padding: 0px 5px
+			margin-bottom: 15px
+		+media-breakpoint-down(xs)
+			padding: 0px
+			margin-bottom: 10px
+	.product-col
+		padding: 10px
+		+bor-rad(5px)
+		+transition(all,0.5s)
+		figure
+			.product-img
+				+flexbox
+				height: 210px
+				justify-content: center
+				align-items: flex-end
+				align-content: flex-end
+				+pos(rel,null)
+				+media-breakpoint-down(lg)
+					height: 160px
+				+media-breakpoint-down(xs)
+					height: 150px
+				img
+					max-width: 100%
+					max-height: 100%
+				.promotion
+					+pos(abs, null 10px 30px null)
+					.new
+						display: block
+						width: 50px
+						height: 50px
+						line-height: 50px
+						text-align: center
+						font-weight: 900
+						+bor-rad(50px)
+						background: $red
+						color: $white
+						+fs(12rem)
+						font-style: italic
+						text-transform: uppercase
+						+media-breakpoint-down(lg)
+							width: 40px
+							height: 40px
+							line-height: 40px
+							+fs(10rem)
+			figcaption
+				text-align: center
+				.product-name
+					+fs(16rem)
+					font-weight: 900
+					text-transform: uppercase
+					margin-bottom: 10px
+					+media-breakpoint-down(lg)
+						+fs(14rem)
+					a
+						color: $dblue
+				.product-des
+					+fs(14rem)
+					font-weight: 500
+					color: $dblue
+					margin-bottom: 15px
+					+transition(all,0.5s)
+					+media-breakpoint-down(lg)
+						+fs(12rem)
+				.btn-wrap
+				.btn-buy
+					display: block
+					text-align: center
+					+fs(16rem)
+					text-transform: uppercase
+					font-weight: 900
+					color: $white
+					background: $menu
+					+bor-rad(5px)
+					padding: 10px 0px
+					+media-breakpoint-down(lg)
+						+fs(10rem)
+					&:after
+						content: '\f0da'
+						margin-left: 10px
+						font-weight: normal
+		&:hover
+			background: $dblue
+			figure
+				.product-img
+				figcaption
+					.product-name
+						a
+							color: $white
+					.product-des
+						color: $white
+					.btn-buy
+						background: $red
+						&:hover
+							background: linear-gradient(45deg,$dred,$red)
+							box-shadow: 0px 5px 10px $dred

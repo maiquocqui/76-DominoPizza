@@ -1,0 +1,61 @@
+.breadcrumb-wrap
+	+pos(rel,null)
+	padding: 80px 0
+	text-align: center
+	text-shadow: 0 3px 10px color-rgba($black,0.1)
+	&.breadcrumb-wrap2
+		padding: 0
+		margin: 0
+		text-align: left
+		z-index: 5
+		ol.breadcrumb
+			padding: 5px 0
+	&.breadcrumb-wrap3
+		padding: 0
+		margin: 0
+		text-align: left
+		z-index: 5
+		background: darken($white,3%)
+		ol.breadcrumb
+			padding: 10px 0
+			li
+				color: darken($white,60%)
+				a
+					color: darken($white,60%)
+					&:hover
+						color: $blue
+
+	.breadcrumb-banner
+		+pos(abs, 0 null 0 0)
+		right: 0
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+			filter: brightness(70%)
+	.container
+		+pos(rel,null)
+		z-index: 1
+	.pagename
+		+fs(32rem)
+		font-weight: 700
+		text-transform: uppercase
+		color: $white
+		margin-bottom: 5px
+	ol.breadcrumb
+		background: none
+		margin: 0
+		padding: 0
+		li
+			display: inline-block
+			color: $white
+			+fs(13rem)
+			&:after
+				content: '\f105'
+				margin: 0px 10px
+			&:last-child
+				&:after
+					display: none
+			a
+				color: $white
+				span

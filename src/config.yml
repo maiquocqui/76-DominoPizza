@@ -1,0 +1,126 @@
+config: 
+# Concat
+  concat: 
+    babelconcat: app.bundler
+    namejs: addons
+    namecss: addons
+    js: 
+      # - "bower_components/jquery/dist/jquery.js"
+      - "bower_components/tether/dist/js/tether.js"
+      - "bower_components/bootstrap/dist/js/bootstrap.js"
+      - "bower_components/owl.carousel/dist/owl.carousel.js"
+      - "bower_components/slick-carousel/slick/slick.js"
+      - "bower_components/jquery-countimator-master/dist/js/jquery.countimator.js"
+      - "bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.js"
+      # - "bower_components/fancyBox-3.0/dist/jquery.fancybox.js"
+      - "bower_components/wow/dist/wow.js"
+      - "bower_components/ScrollToFixed/jquery-scrolltofixed.js"
+      # REVOLUTION
+      - "bower_components/revolution/js/jquery.themepunch.tools.min.js"
+      - "bower_components/revolution/js/jquery.themepunch.revolution.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.actions.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.carousel.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.kenburn.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.layeranimation.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.migration.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.navigation.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.parallax.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.slideanims.min.js"
+      - "bower_components/revolution/js/extensions/revolution.extension.video.min.js"
+    css: 
+      - "bower_components/bootstrap/dist/css/bootstrap.css"
+      - "bower_components/hover/css/hover.css"
+      - "bower_components/animate.css/animate.css"
+      - "bower_components/font-awesome/css/font-awesome.css"
+      - "bower_components/linearicons/icon-font.min.css"
+      - "bower_components/slick-carousel/slick/slick.css"
+      - "bower_components/slick-carousel/click/slick-theme.css"
+      # - "bower_components/fancyBox-3.0/dist/jquery.fancybox.css"
+      - "bower_components/k-flex/dist/css/k-flex.css"
+      - "bower_components/malihu-custom-scrollbar-plugin/jquery.mCustomScrollbar.css"
+      # REVOLUTION
+      - "bower_components/revolution/css/settings.css"
+      - "bower_components/revolution/css/layers.css"
+      - "bower_components/revolution/css/navigation.css"
+# Base config
+  url: "./"
+  baseUrl: "./"
+  source: "src"
+  views: "src/views"
+  dest: "dist"
+  tmp: "html"
+  docs: "docs"
+  test: "test"
+  favicon: "resources/favicon.png"
+  resources: "resources"
+  config: "config"
+  fonts: "fonts"
+  data: "data"
+  blank: "_blank"
+  images: "img"
+# Layout
+  layouts: 
+    assets: "partials"
+    root: "templates"
+    jade: "templates/jade-pug"
+    nunjucks: "templates/nunjucks"
+# Scripts
+  scripts: 
+    assets: "js"
+    root: "scripts"
+    typescript: "scripts/typescript"
+    javascript: "scripts/js"
+    coffee: "scripts/coffee"
+# Styles
+  styles: 
+    assets: "css"
+    root: "styles"
+    css: "styles/css"
+    less: "styles/less"
+    sass: "styles/sass"
+    stylus: "styles/stylus"
+# Ignore
+  ignore: 
+    copy: "{**/*.jade,**/*.nunjucks,**/*.js,**/*.ts,**/*.coffee}"
+    scripts: "{**/*.ts,**/*.coffee}"
+    jade: "{include,include/**}"
+    nunjucks: "{include,include/**}"
+    sass: "{include,include/**}"
+    stylus: "{include,include/**}"
+    css: "{include,include/**}"
+    less: "{include,include/**}"
+    test: "{vendor,vendor/**}"
+# Config Host
+  host: "127.0.0.1"
+  port: "8067"
+# Packer
+  packer: main.js
+  packerdist: app.js #to app.min.js
+# License
+  title: "Gulp App"
+  author: 
+    email: "maiquocqui@gmail.com"
+    name: "QuocQui"
+    link: "http://fb.com/quiquocmai"
+    coding: "Coding by Quoc Qui"
+  license: "MIT"
+  name: "jQuery Web Apps"
+  version: "1.0"
+# SEO
+  SEO:
+    AppName: "WebApp"
+    cfg_name: "Quoc Qui"
+    analytics: ''
+    app_appleID: '12345678'
+    seo_geo: ''
+    seo_geo_lng: ''
+    seo_geo_dlg: ''
+    app_facebook_adminsID: ''
+    app_facebook_ID: ''
+    cfg_description: ""
+    cfg_keywords: ""
+    cfg_title: ""
+    cfg_content: ""
+    cfg_author: "Quoc Qui"
+    cfg_url: "http://fb.com/quiquocmai"
+    cfg_sitenameurl: "Quoc Qui Mai" 

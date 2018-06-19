@@ -1,0 +1,53 @@
+.support-page
+	padding: 60px 0
+	min-height: calc(100vh - 210px)
+	+media-breakpoint-down(lg)
+		min-height: calc(100vh - 70px - 100px)
+	+media-breakpoint-down(md)
+		padding: 40px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	+media-breakpoint-down(xs)
+		min-height: calc(100vh - 70px - 92px)
+	.customer-support
+		.support-col
+			margin-bottom: 40px
+			figure
+				.support-img
+					+flexbox
+					justify-content: center
+					align-items: center
+					align-content: center
+					height: 180px
+					padding: 10px 0
+					margin-bottom: 20px
+					+media-breakpoint-down(sm)
+						height: 200px
+						margin-bottom: 0
+					img
+						max-width: 90%
+						max-height: 90%
+				figcaption
+					.support-name
+						a
+							display: block
+							color: $white
+							background: $blue
+							padding: 25px 0
+							+bor-rad(5px)
+							font-weight: 900
+							+fs(16rem)
+							line-height: 1.4
+							text-align: center
+							text-transform: uppercase
+							+media-breakpoint-down(lg)
+								+fs(12rem)
+								padding: 15px 0
+							+media-breakpoint-down(md)
+								padding: 15px 25px
+				&:hover
+					figcaption
+						.support-name
+							a
+								background: $red
+								box-shadow: 0px 5px 10px color-rgba($black,0.3)

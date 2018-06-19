@@ -1,0 +1,178 @@
+.top-nav
+	background: $black
+	.container
+		+media-breakpoint-down(md)
+			max-width: 100%
+			padding: 0
+	ul
+		+flexbox
+		justify-content: center
+		+media-breakpoint-down(md)
+			display: block
+			white-space: nowrap
+			overflow: auto
+			padding: 0px 15px
+		li
+			border-left: 1px solid $white
+			+media-breakpoint-down(md)
+				display: inline-block
+				border-left: none
+				background: color-rgba($white,0.1)
+			&:last-child
+				border-right: 1px solid $white
+				+media-breakpoint-down(md)
+					border-right: none
+			a
+				display: block
+				+fs(16rem)
+				line-height: 40px
+				font-weight: 900
+				color: $white
+				font-style: italic
+				width: 190px
+				text-align: center
+				text-transform: uppercase
+				+media-breakpoint-down(lg)
+					+fs(14rem)
+					line-height: 36px
+					width: 150px
+				+media-breakpoint-down(md)
+					+fs(13rem)
+					width: 130px
+			&:hover
+				a
+					color: $red
+					text-shadow: 0px 5px 10px color-rgba($black,0.3)
+			&.active
+				a
+					color: $white
+					background: $red
+	&.s2
+		ul
+			justify-content: flex-start
+
+.about-page
+	padding: 60px 0
+	+media-breakpoint-down(md)
+		padding: 40px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+.about-commit
+	.commit-col
+		+media-breakpoint-down(sm)
+			margin-bottom: 20px
+		.commit-img
+			+flexbox
+			height: 80px
+			align-items: center
+			align-content: center
+			margin-bottom: 20px
+			+media-breakpoint-down(sm)
+				margin-bottom: 0
+
+.about-history
+	.milestone
+		+pos(rel,null)
+		width: 400px
+		margin: 0px auto 40px
+		padding: 10px 0
+		+media-breakpoint-down(lg)
+			width: 100%
+			padding: 0
+			+flexbox
+			align-items: center
+			align-content: center
+		+media-breakpoint-down(md)
+			flex-wrap: wrap
+		+media-breakpoint-down(sm)
+			margin-bottom: 30px
+		&:nth-child(even)
+			.img
+				left: unset
+				right: -80px
+				+transform(translate(100%,0))
+				@media (max-width: 1440px)
+					right: -30px
+				+media-breakpoint-down(lg)
+					+transform(translate(0,0))
+					order: 2
+					text-align: right
+				+media-breakpoint-down(sm)
+					order: 1
+					text-align: center
+			.text
+				text-align: right
+				+media-breakpoint-down(lg)
+					order: 1
+				+media-breakpoint-down(sm)
+					order: 2
+					text-align: center
+		.img
+			+pos(abs, 0 null null -80px)
+			+transform(translate(-100%,0))
+			@media (max-width: 1440px)
+				left: -30px
+			+media-breakpoint-down(lg)
+				+pos(static,unset)
+				+transform(translate(0,0))
+				width: 330px
+			+media-breakpoint-down(sm)
+				width: 100%
+				text-align: center
+				margin-bottom: 15px
+			img
+		.text
+			line-height: 1.8
+			+media-breakpoint-down(lg)
+				width: calc(100% - 330px)
+			+media-breakpoint-down(sm)
+				width: 100%
+				text-align: center
+			.title
+				+fs(24rem)
+				font-weight: 900
+				+media-breakpoint-down(md)
+					+fs(20rem)
+					margin-bottom: 10px
+				.year
+					font-weight: 900
+					color: $red
+			p
+				color: $main
+				+fs(14rem)
+				font-weight: 500
+
+.about-specification
+	.speci-col
+		+media-breakpoint-down(sm)
+			margin-bottom: 20px
+		figure
+			.speci-img
+				+flexbox
+				height: 230px
+				justify-content: center
+				align-items: center
+				align-content: center
+				margin-bottom: 20px
+				+media-breakpoint-down(md)
+					height: 150px
+				+media-breakpoint-down(xs)
+					height: 200px
+				
+			figcaption
+				+media-breakpoint-down(lg)
+					text-align: center
+				+media-breakpoint-down(xs)
+					padding: 0px 30px
+				.speci-name
+					+fs(16rem)
+					font-weight: 900
+					color: $blue
+					margin-bottom: 10px
+					+media-breakpoint-down(md)
+						+fs(14rem)
+				.speci-des
+					+fs(14rem)
+					font-weight: 500
+					+media-breakpoint-down(md)
+						+fs(13rem)

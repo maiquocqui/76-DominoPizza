@@ -1,0 +1,97 @@
+.promotion-page
+	padding: 60px 0
+	+media-breakpoint-down(md)
+		padding: 40px 0
+	+media-breakpoint-down(sm)
+		padding: 30px 0
+	.promotion-list
+		.promo-card
+			background: darken($white,40%) url(../img/woodbg.png) center center no-repeat
+			background-size: cover
+			margin-bottom: 30px
+			+bor-rad(5px)
+			box-shadow: 0px 5px 10px color-rgba($black,0.3)
+			+transition(all,0.5s)
+			&:hover
+				box-shadow: 0px 10px 20px color-rgba($black,0.5)
+			figure
+				+flexbox
+				flex-wrap: wrap
+				align-items: center
+				align-content: center
+				+media-breakpoint-down(md)
+					align-items: flex-start
+					align-content: flex-start
+				.promo-img
+					+flexbox
+					justify-content: center
+					align-items: center
+					align-content: center
+					width: calc(33.33% - 15px)
+					min-height: 280px
+					padding: 35px 0
+					+media-breakpoint-down(lg)
+						width: calc(40% - 15px)
+						align-items: flex-start
+						align-content: flex-start
+					+media-breakpoint-down(sm)
+						width: 100%
+						min-height: unset
+						padding: 20px 0
+					img
+						+media-breakpoint-down(lg)
+							max-width: 80%
+							max-height: 80%
+						+media-breakpoint-down(sm)
+							max-width: 90%
+							max-height: 90%
+				figcaption
+					width: calc(60% - 15px)
+					margin-left: 30px
+					+media-breakpoint-down(lg)
+						padding: 30px 30px 30px 0px
+					+media-breakpoint-down(sm)
+						width: 100%
+						padding: 0px 15px 15px
+						margin-left: 0
+					.promo-name
+						+fs(24rem)
+						font-weight: 900
+						margin-bottom: 15px
+						+media-breakpoint-down(md)
+							+fs(20rem)
+						+media-breakpoint-down(sm)
+							+fs(18rem)
+							margin-bottom: 10px
+						a
+							color: $red
+					.promo-des 
+						+fs(16rem)
+						color: $white
+						margin-bottom: 30px
+						+media-breakpoint-down(md)
+							+fs(14rem)
+							margin-bottom: 20px
+						+media-breakpoint-down(sm)
+							+fs(13rem)
+							margin-bottom: 15px
+					.btn-order
+						+fs(16rem)
+						text-transform: uppercase
+						color: $white
+						font-weight: 800
+						padding: 12px 25px
+						+bor-rad(5px)
+						background: $blue
+						display: inline-block
+						+media-breakpoint-down(md)
+							padding: 10px 25px
+							+fs(14rem)
+						+media-breakpoint-down(sm)
+							display: block
+							text-align: center
+							+fs(13rem)
+							padding: 10px 25px
+						&:hover
+							background: linear-gradient(to right,$lred, $red)
+							box-shadow: 0px 5px 10px $dred

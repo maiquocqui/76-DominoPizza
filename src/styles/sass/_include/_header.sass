@@ -1,0 +1,389 @@
+@keyframes menu-in
+	0%
+		opacity: 0
+		visibility: hidden
+	100%
+		opacity: 1
+		visibility: visible
+// @keyframes menu-out
+// 	0%
+// 		opacity: 1
+// 		visibility: visible
+// 	100%
+// 		opacity: 0
+// 		visibility: hidden
+
+html
+	&.deactive
+		overflow: hidden
+header
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	+media-breakpoint-down(lg)
+		background: linear-gradient(to right, color-rgba($dblue,1),color-rgba($menu,1))
+	.header-home
+		display: none
+		+media-breakpoint-down(lg)
+			display: block
+		.sitelogo
+			margin-top: 60px
+			float: left
+			+pos(rel,null)
+			z-index: 1100
+			+media-breakpoint-down(lg)
+				margin-top: 0
+				margin-left: 30px
+				height: 70px
+				+flexbox
+				align-items: center
+				align-content: center
+			+media-breakpoint-down(xs)
+				margin-left: 10px
+			a
+				display: block
+			img
+				+media-breakpoint-down(lg)
+					height: 30px
+		.container
+			+media-breakpoint-up(xl)
+				max-width: 100%
+				width: 100%
+				padding: 0px 150px
+			@media (max-width: 1440px)
+				padding: 0px 100px
+			+media-breakpoint-down(lg)
+				padding: 0px 15px
+				max-width: 100%
+	.btn-togglemenu
+		+media-breakpoint-down(lg)
+			width: 40px
+			height: 40px
+			+bor-rad(50px)
+			background: $menu
+			+pos(rel,null)
+			float: right
+			z-index: 1100
+			margin: 15px 0
+			+flexbox
+			justify-content: center
+			align-items: center
+			align-content: center
+			+transition(all,0.5s)
+			&:before, &:after
+				content: ''
+				+pos(abs, 14px 12px null 12px)
+				height: 2px
+				background: $white
+				+transition(all,0.5s)
+			&:after
+				top: unset
+				bottom: 14px
+			span
+				display: block
+				width: 16px
+				height: 12px
+				+pos(rel,null)
+				&:before, &:after
+					content: ''
+					+pos(abs, 50% 0 null 0)
+					+transform(translate(0,-50%))
+					height: 2px
+					background: $white
+					+transition(all,0.5s)
+			&.active
+				background: $white
+				&:before
+					margin-top: -10px
+					opacity: 0
+					background: $menu
+				&:after
+					margin-bottom: -10px
+					opacity: 0
+					background: $menu
+				span
+					&:before
+						+transform(rotateZ(45deg))
+						background: $menu
+					&:after
+						+transform(rotateZ(-45deg))
+						background: $menu
+
+	.overlay
+		+pos(fix, 35px 35px unset unset)
+		width: 30px
+		height: 30px
+		+transform(translate(50%, -50%)scale3d(1,1,1))
+		background: linear-gradient(135deg,color-rgba($dblue,0.95),color-rgba($blue,0.95))
+		+bor-rad(50px)
+		+transition(all,0.7s)
+		display: none
+		+media-breakpoint-down(lg)
+			display: block
+		&.active
+			+transform(translate(50%,-50%)scale3d(100,100,100))
+	.menu
+		+pos(fix, 0 null 0 0)
+		z-index: 1000
+		+transform(translateX(-100%))
+		+transition(all,0.5s)
+		background: $red
+		padding: 0px 150px
+		@media (max-width: 1440px)
+			padding: 0px 100px
+		+media-breakpoint-down(lg)
+			// right: 0
+			padding: 0px 40px
+			background: none
+			+flexbox
+			flex-wrap: wrap
+			align-items: center
+			align-content: center
+			overflow: auto
+			visibility: hidden
+			opacity: 0
+			transition-delay: 0s
+		+media-breakpoint-only(sm)
+			padding: 70px 40px 0
+			display: block
+		+media-breakpoint-down(xs)
+			padding: 0px 25px
+		&.open
+			+transform(translateX(0%))
+			background: $menu
+			+media-breakpoint-down(lg)
+				background: none
+				visibility: visible
+				opacity: 1
+				transition-delay: 0.2s
+		.btn-togglemenu
+			+pos(abs, 50% -75px null null)
+			+transform(translate(0,-50%))
+			width: 75px
+			height: 150px
+			overflow: hidden
+			cursor: pointer
+			&:before
+				content: '\f0c9'
+				+fs(36rem)
+				line-height: 150px
+				color: $white
+				+pos(abs, 0 null 0 0)
+				right: 0
+				z-index: 2
+				text-align: center
+				+transition(all,0.5s)
+			&:after
+				content: ''
+				+pos(abs, 0 0 0 null)
+				width: 150px
+				+bor-rad(50%)
+				background: $red
+				z-index: 1
+				+transition(all,0.5s)
+			&.active
+				&:before
+					content: '\f104'
+				&:after
+					background: $menu
+		.login
+			margin-top: 170px
+			margin-bottom: 30px
+			+media-breakpoint-down(lg)
+				margin-top: 0
+			ul
+				+flexbox
+				align-items: center
+				align-content: center
+				// padding-left: 40px
+				+pos(rel,null)
+				z-index: 1
+				&:before
+					content: ''
+					display: block
+					width: 30px
+					height: 30px
+					margin-right: 10px
+					// +pos(abs, 0 null null 0)
+					background: url(../img/icon/user.png) center center no-repeat
+				li
+					+pos(rel,null)
+					color: $white
+					+ li
+						margin-left: 20px
+						&:before 
+							content: ''
+							+pos(abs, 3px null null -11px)
+							+transform(rotateZ(10deg))
+							width: 3px
+							height: 14px
+							background: $white
+					a
+						display: block
+						+fs(14rem)
+						font-weight: 900
+						color: $white
+						text-transform: uppercase
+						&:hover
+							color: $red
+		.menu-content
+			+pos(rel,null)
+			z-index: 1
+			+media-breakpoint-only(sm)
+				overflow: auto
+				max-height: 100%
+				padding-bottom: 30px
+			.menu-wrap
+				margin-bottom: 50px
+			ul.menu-link
+				> li
+					> a
+						display: block
+						+fs(24rem)
+						font-weight: 900
+						font-style: italic
+						color: $white
+						padding: 5px 0
+						text-transform: uppercase 
+						+media-breakpoint-down(lg)
+							+fs(20rem)
+					&:hover, &.active
+						> a
+							color: $red
+							text-shadow: 0px 5px 10px color-rgba($black,0.3)
+			.social
+				+flexbox
+				a
+					display: block
+					width: 80px
+					height: 80px
+					line-height: 80px
+					+fs(32rem)
+					color: $white
+					text-align: center
+					box-shadow: 0px 5px 10px color-rgba($black,0.3)
+					+media-breakpoint-down(lg)
+						width: 50px
+						height: 50px
+						line-height: 50px
+						+fs(24rem)
+						box-shadow: 0px 5px 10px color-rgba($black,0.1)
+					+ a
+						margin-left: 20px
+						+media-breakpoint-down(lg)
+							margin-left: 10px
+					&.fa-instagram
+						background: $insta
+					&.fa-facebook
+						background: $facebook
+					&.fa-twitter
+						background: $twitter
+					&:hover
+						filter: brightness(120%)
+						box-shadow: 0px 5px 10px color-rgba($black,0.5)
+	.header-page
+		display: block
+		background: $menu
+		box-shadow: 0px 5px 10px color-rgba($black,0.3)
+		+media-breakpoint-down(lg)
+			display: none
+		.sitelogo
+			+flexbox
+			align-items: center
+			align-content: center
+			height: 100px
+			float: left
+			a
+				display: block
+		.colright
+			height: 100px
+			+flexbox
+			align-items: center
+			align-content: center
+			float: right
+			+pos(rel,null)
+			.login
+				ul
+					+flexbox
+					align-items: center
+					align-content: center
+					// padding-left: 40px
+					+pos(rel,null)
+					&:before
+						content: ''
+						display: block
+						width: 30px
+						height: 30px
+						margin-right: 10px
+						// +pos(abs, 0 null null 0)
+						background: url(../img/icon/user.png) center center no-repeat
+					li
+						+pos(rel,null)
+						color: $white
+						+ li
+							margin-left: 20px
+							&:before 
+								content: ''
+								+pos(abs, 3px null null -11px)
+								+transform(rotateZ(10deg))
+								width: 3px
+								height: 14px
+								background: $white
+						a
+							display: block
+							+fs(14rem)
+							font-weight: 900
+							color: $white
+							text-transform: uppercase
+							&:hover
+								color: $red
+			.btn-togglemenu
+				+fs(36rem)
+				color: $white
+				margin-left: 40px
+				cursor: pointer
+				+transition(all,0.5s)
+				&:hover
+					color: $red
+					text-shadow: 0px 5px 10px color-rgba($black,0.3)
+			.menu
+				+media-breakpoint-up(xl)
+					+pos(abs, 100% -70px unset unset)
+					padding: 70px
+					min-width: 430px
+					text-align: right
+					overflow: hidden
+					+transform(translate(70px,0))
+					visibility: hidden
+					opacity: 0
+					background: linear-gradient(135deg,$dblue,$menu)
+					box-shadow: 0px 5px 10px color-rgba($black,0.3)
+					&.open
+						+transform(translate(0,0))
+						opacity: 1
+						visibility: visible
+					&:before
+						content: ''
+						display: block
+						height: 50px
+						+pos(abs, null 0 100% 0)
+						box-shadow: 0px 5px 10px color-rgba($black,0.3)
+					.menu-content
+					.menu-wrap
+						ul.menu-link
+							> li
+								> a
+					.social
+						a
+body
+	padding-top: 100px
+	+media-breakpoint-down(lg)
+		padding-top: 70px
+.homepage
+	padding-top: 0
+	header
+		+media-breakpoint-down(lg)
+			background: none
+	.header-home
+		display: block
+	.header-page
+		display: none

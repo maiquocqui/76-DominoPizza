@@ -1,0 +1,131 @@
+//- nav.top-nav.s2
+	.container
+		ul
+			li.active
+				a(href="#!") Pizza
+			li
+				a(href="#!") Món ăn kèm
+			li
+				a(href="#!") Giải khát
+			li
+				a(href="#!") Tráng miệng
+.container
+	.row
+		.col-12.col-lg-8.col-xl-9
+			section.booking-page.b4.clearfix
+				h1.page-title Thông tin thanh toán
+				.booking-form.info-form
+					.info-group
+						.form-wrap.row
+							.form-group.col-12.col-md-6
+								label(for="") Tỉnh thành
+								select(name="")
+									option(value="") Hồ Chí Minh
+							.form-group.col-12.col-md-6
+								label(for="") Quận huyện
+								select(name="")
+									option(value="") Quận 1
+							//- .form-group.col-12.col-md-3
+								label(for="") Số nhà
+								input(type="text")
+							//- .form-group.col-12.col-md-9
+								label(for="") Tên đường
+								input(type="text")
+							.form-group.col-12.col-md-6
+								label(for="") Thời gian giao hàng
+								select(name="")
+									option(value="") Ngay khi có bánh
+							.form-group.col-12
+								label Chọn cửa hàng
+								ul.addr-list
+									li.radio
+										input#dc1(type="radio", name="dc", checked)
+										label(for="dc1") 
+											span.addr 236 Đinh Tiên Hàng, Phường Đakao, Quận 1
+									li.radio
+										input#dc2(type="radio", name="dc")
+										label(for="dc2") 
+											span.addr 236 Đinh Tiên Hàng, Phường Đakao, Quận 1
+					.info-group
+						.form-wrap.row
+							.form-group.col-12.col-md-6
+								label(for="") Họ và tên khách hàng
+								input(type="text")
+							.form-group.col-12.col-md-6
+								label(for="") Xác nhận đơn hàng qua
+								ul.confirm
+									li.checkbox
+										input#sms(type="radio", name="confirm" checked)
+										label(for="sms") SMS
+									li.checkbox
+										input#email(type="radio", name="confirm")
+										label(for="email") Email
+							.form-group.col-12.col-md-6
+								label(for="") Điện thoại
+								input(type="text")
+							.form-group.col-12.col-md-6
+								label(for="") Email
+								input(type="text")
+							.form-group.col-12
+								label(for="") Ghi chú cho đơn hàng
+								textarea(name="", cols="30", rows="7")
+					.info-group
+						h2.form-title Phương thức thanh toán
+						.payment-method
+							.row
+								.col-12.col-md-4
+									.method.checkbox
+										input#pay1(type="radio", name="pay" checked)
+										label(for="pay1") 
+											.icon
+												img(src="img/icon/pay1.png", alt="")
+											.text Thanh toán khi nhận hàng
+								.col-12.col-md-4
+									.method.checkbox
+										input#pay2(type="radio", name="pay")
+										label(for="pay2") 
+											.icon
+												img(src="img/icon/pay2.png", alt="")
+											.text Thanh toán bằng thẻ ATM
+								.col-12.col-md-4
+									.method.checkbox
+										input#pay3(type="radio", name="pay")
+										label(for="pay3") 
+											.icon
+												img(src="img/icon/pay3.png", alt="")
+											.text Thanh toán thẻ tín dụng
+					.payment-des Cảm ơn quý khách đã đặt hàng tại Domino's Pizza Việt Nam. Qúy khách sẽ thanh toán giá trị tổng hóa đơn ngay sau khi nhận được sản phẩm. Bất kỳ lý do nào quý khách muốn liên hệ DOMINO'S PIZZA vui lòng gọi 1900 6099
+		.col-12.col-lg-4.col-xl-3
+			section.booking-bill.clearfix
+				.voucher
+					.module-title Nhập mã khuyến mãi
+					.voucher-input
+						input(type="text" placeholder="Voucher code")
+						button.vouchersubmit <i class="fa fa-paper-plane" aria-hidden="true"></i>
+				.booking-detail
+					.title Chi tiết đơn hàng
+					.booking-table
+						.product
+							h4.product-name 1x Prime Beef, cỡ vừa, đế mỏng
+							.product-price 179.000 đ
+							.btn-wrap
+								a.btn-change(href="#!") Thay đổi
+								a.btn-remove(href="#!") Bỏ chọn
+						.product
+							h4.product-name 1x Almond Citrus seafood, cỡ vừa, đế mỏng
+							.product-price 179.000 đ
+							.btn-wrap
+								a.btn-change(href="#!") Thay đổi
+								a.btn-remove(href="#!") Bỏ chọn
+					.total-fee
+						.label Tổng cộng
+						.value 358.000 đ
+					//- .address-info
+						.address
+							.address-name Cửa hàng giao
+							.address-detail 236 Đinh Tiên Hoàng, Phường Đakao, Quận 1, TP.HCM
+						.address
+							.address-name Nơi đặt hàng
+							.address-detail 156 Nguyễn Văn Thủ, Phường Đakao, Quận 1, TP.HCM
+				.btnpay-wrap
+					a.btn-pay(href="#!") Thanh toán

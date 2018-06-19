@@ -1,0 +1,32 @@
+section.store-page.clearfix
+	.container
+		h1.page-title.text-center Hệ thống cửa hàng
+		.row
+			.col-12.col-lg-6
+				.store-map
+					iframe(src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3919.31161617254!2d106.69704702862825!3d10.787428197603536!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752f351e2c245f%3A0xb2887356ab89d12b!2zQ8OhbmggQ2Ft!5e0!3m2!1sen!2s!4v1510372493379" width="100%" height="330" frameborder="0" style="border:0" allowfullscreen)
+			.col-12.col-lg-6
+				.store-form
+					.row
+						.form-group.col-12.col-md-6
+							label Tỉnh thành
+							select
+								option Hồ Chí Minh
+						.form-group.col-12.col-md-6
+							label Quận huyện
+							select
+								option Quận 1
+						.form-group.col-12
+							label Giờ giao hàng
+							input(type="text" value="Ngay khi có bánh")
+						.form-group.col-12
+							label Chọn cửa hàng
+							ul.addr-list
+								li.radio
+									input#dc1(type="radio", name="dc", checked)
+									label(for="dc1") 
+										span.addr 236 Đinh Tiên Hàng, Phường Đakao, Quận 1
+								li.radio
+									input#dc2(type="radio", name="dc")
+									label(for="dc2") 
+										span.addr 236 Đinh Tiên Hàng, Phường Đakao, Quận 1

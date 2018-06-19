@@ -1,0 +1,107 @@
+.page-title
+	+fs(36rem)
+	text-transform: uppercase
+	font-weight: 900
+	color: $menu
+	padding: 10px 0
+	margin-bottom: 30px
+	border-bottom: 2px dotted $menu
+	+media-breakpoint-down(md)
+		+fs(28rem)
+	+media-breakpoint-down(sm)
+		+fs(24rem)
+	+media-breakpoint-down(xs)
+		+fs(18rem)
+main
+	background: url(../img/mainbg.jpg) center center repeat
+.home-banner
+	+pos(rel,null)
+	.banner-img
+		width: 100%
+		height: calc(100vh - 110px)
+		min-height: 670px
+		// +flexbox
+		// justify-content: center
+		// align-items: center
+		overflow: hidden
+		+media-breakpoint-down(lg)
+			height: calc(100vh - 100px)
+			min-height: unset
+		+media-breakpoint-down(md)
+			height: calc(100vh - 118px)
+		+media-breakpoint-down(sm)
+			height: calc(100vh - 93px)
+		+media-breakpoint-down(xs)
+			height: calc(100vh - 92px)
+		img
+			width: 100%
+			height: 100%
+			object-fit: cover
+	.banner-nav
+		+pos(abs, null null 15% 50%)
+		+transform(translate(-50%,0))
+		+flexbox
+		+media-breakpoint-down(xs)
+			flex-wrap: wrap
+			justify-content: center
+			// bottom: 10%
+		a
+			display: block
+			padding: 10px
+			background: linear-gradient(to right,$blue, $blue)
+			box-shadow: 0px 5px 10px color-rgba($black,0.3)
+			&:hover
+				background: linear-gradient(to right,$lblue, $blue)
+				box-shadow: 0px 5px 10px $dblue
+			&:last-child
+				background: linear-gradient(to right,$red,$red)
+				margin-left: 40px
+				+media-breakpoint-down(xs)
+					margin-left: 0
+					margin-top: 20px
+				&:hover
+					background: linear-gradient(to right,$lred, $red)
+					box-shadow: 0px 5px 10px $dred
+			.link
+				border: 1px solid $white
+				+bor-rad(5px)
+				+flexbox
+				align-items: center
+				align-content: center
+				width: 260px
+				height: 90px
+				color: $white
+				+media-breakpoint-down(lg)
+					width: 230px
+					height: 70px
+				+media-breakpoint-down(sm)
+					width: 180px
+					height: 60px
+				+media-breakpoint-down(xs)
+					width: 230px
+				.icon
+					width: 120px
+					+flexbox
+					justify-content: center
+					align-items: center
+					+media-breakpoint-down(lg)
+						width: 100px
+						height: 100%
+						img
+							max-width: 70%
+							max-height: 70%
+					+media-breakpoint-down(sm)
+						width: 70px
+						height: 70px
+				.text
+					width: calc(100% - 120px)
+					+fs(16rem)
+					line-height: 1.5
+					font-weight: 900
+					text-transform: uppercase
+					+media-breakpoint-down(lg)
+						width: calc(100% - 100px)
+						+fs(14rem)
+					+media-breakpoint-down(sm)
+						width: calc(100% - 70px)
+						+fs(12rem)
